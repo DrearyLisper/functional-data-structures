@@ -15,3 +15,15 @@ class Heap h where
 ```
 
 ### Leftist heap
+
+## Sets
+
+Set is data structure that supports the following interface
+
+```haskell
+class Set s where
+    empty :: Ord e => s e
+    add :: Ord e => s e -> e -> s e
+    remove :: Ord e => s e -> e -> s e
+    contains :: Ord e => s e -> e -> Bool
+```
