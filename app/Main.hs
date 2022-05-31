@@ -1,6 +1,6 @@
 module Main where
 
-import Data.Types
+import Data.Heap.Types
 import Data.Heap.Leftist
 import Data.Heap.Utils
 

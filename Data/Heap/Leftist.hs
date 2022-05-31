@@ -1,7 +1,7 @@
 {-# Language InstanceSigs #-}
 module Data.Heap.Leftist (LeftistHeap(..)) where
 
-import Data.Types 
+import Data.Heap.Types 
 
 data LeftistHeap e 
     = EmptyHeap
