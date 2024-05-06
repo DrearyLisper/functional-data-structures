@@ -1,4 +1,5 @@
 {-# Language InstanceSigs #-}
+{-# LANGUAGE BangPatterns #-}
 module Data.Heap.Leftist (LeftistHeap(..)) where
 
 import Data.Heap.Types 
@@ -44,7 +45,7 @@ empty' :: LeftistHeap e
 empty' = EmptyHeap
 
 push' :: Ord e => LeftistHeap e -> e -> LeftistHeap e
-push' h e = merge h (HeapNode 1 e EmptyHeap EmptyHeap) 
+push' !h e = merge h (HeapNode 1 e EmptyHeap EmptyHeap) 
 
 peek' :: LeftistHeap e -> e
 peek' EmptyHeap = error "Cannot peek a top element of empty heap"
